@@ -6,39 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinturerías Plaza Olmos - Contacto</title>
     <link rel="shortcut icon" href="../imagenes/logo-01.jpg">
-    <link rel="stylesheet" href="../estilos.css"> <!-- archivo de estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <img src="../imagenes/plazaolmos-02.jpg" alt="Logo Plaza Olmos">
     </header>
-    <nav>
-        <ul>
-        <li><a href="../index.html">INICIO</a></li>
-        <li><a href="./nuestrosClientes.html">CLIENTES</a></li>    
-        <li><a href="./sucursales.html">SUCURSALES</a></li>
-        <li><a href="./promociones.html">PROMOCIONES</a></li>
-        <li><a href="#">CONTACTO</a></li>
-        </ul>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-link active" aria-current="page" href="index.html"><strong> INICIO </strong></a>
+        <a class="nav-link active" aria-current="page" href="./pages/nuestrosClientes.html"><strong> CLIENTES </strong></a>
+        <a class="nav-link active" aria-current="page" href="./pages/sucursales.html"><strong> SUCURSALES </strong></a>
+        <a class="nav-link active" aria-current="page" href="/pages/promociones.html"><strong> PROMOCIONES </strong></a>
+        <a class="nav-link active" aria-current="page" href="#"><strong> CONTACTO </strong></a>
     </nav>
     <main>
         <h2>Contacto</h2>
             <fieldset class="formulario">  
                 <legend>Contactanos</legend>
                 <form>
-                    Nombre <input type="text" required> <br>
-                    Edad    <select name="Rango">
-                            <option>1 a 10</option> 
-                            <option>11 a 20</option>
-                            <option>21 a 30</option>
-                            <option>31 a 40</option>
-                            <option>41 a 50</option>
-                            <option>51 a 60</option>
-                            <option>Más de 60</option>
-                        </select>
-                        <br>
-                    Email <input type="email" placeholder="ejemplo@gmail.com" required> <br>    
-                    Teléfono <input type="text" placeholder="Sin el 0, y sin el 15" required> <br>
+
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="nombreCompleto" class="form-control" id="nombre" placeholder="Tu Nombre">
+                    </div>
+
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Edad</option>
+                        <option value="1">0-10 años</option>
+                        <option value="2">11-20 años</option>
+                        <option value="3">21-30 años</option>
+                        <option value="3">31-40 años</option>
+                        <option value="3">41-50 años</option>
+                        <option value="3">51-60 años</option>
+                        <option value="3">61-70 años</option>
+                        <option value="3">71-80 años</option>
+                        <option value="3">81-90 años</option>
+                        <option value="3">91-100 años</option>
+                    </select>
+
+                    <div class="mb-3">
+                        <label for="direccionMail" class="form-label">Dirección de e-mail</label>
+                        <input type="email" class="form-control" id="direccionMail" placeholder="tunombre@ejemplo.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Número de teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Tu número, sin 0  y sin 15">
+                    </div>
+
                     Adjuntar archivo <input type="file" placeholder="Enviar"><br>
                         <textarea name="area de texto" cols="30" rows="5" placeholder="Escribe tu consulta"></textarea><br>
                         <input type="submit" value="Enviar">
